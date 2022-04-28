@@ -1,0 +1,95 @@
+
+:root {
+    --primary: #EDE8DD;
+    --light: #F6F6F1;
+    --dark: #161616;
+    --bright: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F6F6F1;
+    color: var(--dark);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+}
+
+header, main, footer {
+    display: block;
+    position: relative;
+}
+
+footer {
+    background-color: #161616;
+    color: #FFFFFF;
+    line-height: 2em;
+    text-align: center;
+}
+
+/* nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 50px 32px;
+} */
+
+h1 {
+    font-family: 'Press Start 2P', cursive, serif;
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive, serif;
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+.content { 
+    max-width: 1400px;
+    margin: 0 max(170px, 12vw);
+    padding: 50px 0 0;
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.title-section {
+    padding-bottom: 0;
+    width: 100%;
+    background-color: var(--primary);
+}
+
+#main-banner {
+    gap: 0;
+    z-index: 1;
+    align-items: center;
+}
