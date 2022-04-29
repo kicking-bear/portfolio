@@ -4,49 +4,48 @@
     --light: #F6F6F1;
     --dark: #161616;
     --bright: #FFFFFF;
+    --padding-clamp: clamp(20px, 4.89vh, 50px);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 body {
-    background-color: #F6F6F1;
+    background-color: var(--light);
     color: var(--dark);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
+
+    display: flex;
+    flex-direction: column;
 }
 
-header, main, footer {
-    display: block;
+header, main {
     position: relative;
+    width: 100%;
+
+    flex: 1 0 auto;
 }
+
 
 footer {
-    background-color: #161616;
-    color: #FFFFFF;
-    line-height: 2em;
-    text-align: center;
+    width: 100%;
+    bottom: 0;
+
+    flex-shrink: 0;;
 }
 
-/* nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    padding: 50px 32px;
-} */
-
 h1 {
-    font-family: 'Press Start 2P', cursive, serif;
-    font-size: 1.25rem;
+    font-family: "VT323", monospace;
+    font-size: 2rem;
 }
 
 h2 {
-    font-family: 'Press Start 2P', cursive, serif;
+    font-family: 'Press Start 2P', monospace;
     font-size: 1rem;
 }
 
@@ -60,22 +59,36 @@ a{
     text-decoration: inherit;
 }
 
-img {
+#profile-pic {
+    text-align: right;
+    right: -100px;
+}
+
+.profile-pic {
     vertical-align: top;
+    width: 30em;
+    height: auto;
 }
 
 
-.content { 
-    max-width: 1400px;
-    margin: 0 max(170px, 12vw);
-    padding: 50px 0 0;
+.content-block { 
+    overflow-x: hidden;
+    max-width: 1300px;
+    padding: var(--padding-clamp) var(--padding-clamp) 0;
+
 }
 
 .flex-container {
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     gap: 50px;
+    margin: 0 0;
+}
+
+.flex-item {
+    margin: 0 0;
 }
 
 .center-text {
@@ -83,9 +96,18 @@ img {
 }
 
 .title-section {
-    padding-bottom: 0;
-    width: 100%;
     background-color: var(--primary);
+}
+
+.body-section {
+    background-color: var(--light);
+}
+
+.info-section {
+    background-color: var(--dark);
+    color: var(--bright);
+    line-height: 2rem;
+    padding-bottom: var(--padding-clamp);
 }
 
 #main-banner {

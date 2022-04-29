@@ -12,8 +12,8 @@
     <!-- Fonts from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Icon library from Font Awesome -->
     <script src="https://kit.fontawesome.com/c4db305d90.js" crossorigin="anonymous"></script>
 
@@ -21,104 +21,105 @@
 </head>
 <body>
     <!-- Title Block -->
-    <header class="clearfix">
-        <div class="title-section">
-            <nav>
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="index.html">
-                        <h1>Daniel Manning</h1>
-                        <p>UX/UI Designer</p>
-                        <p><i class="fa-solid fa-location-dot"></i> NJ, USA</p>
-                    </a>
+    <header>
+        <section class="title-section">
+            <nav class="content-block" id="navbar">
+                <div class="flex-container">
+                    <!-- Logo -->
+                    <div class="flex-item" id="logo">
+                        <a href="index.html">
+                            <h1>Daniel Manning</h1>
+                            <p>UX/UI Designer</p>
+                            <p><i class="fa-solid fa-location-dot"></i> NJ, USA</p>
+                        </a>
+                    </div>
+                    <!-- Nav Bar -->
+                    <div class="menu flex-container">
+                        <div class="flex-item"><a href="recent-work.html">Recent Work</a></div>
+                        <div class="flex-item"><a href="about.html">About</a></div>
+                        <div class="flex-item"><a href="#contact">Contact</a></div>
+                    </div>
                 </div>
-                <!-- Nav Bar -->
-                <div class="menu">
-                    <a href="recent-work.html">Recent Work</a>
-                    <a href="about.html">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
+                <br>
             </nav>
-        </div>
+        </section>
     </header>
+
+
     <main>
         <!-- Recent Work -->
         <section class="body-section" id="recent-work">
-            <div class="body-section-title">
-                <h2>
-                    Recent Work
-                    <!-- TODO -->
-                    <!-- Add a line span -->
-                </h2>
-            </div>
-
-            <div class="recent-work-card">
-                <div class="recent-work-preview-img">
-                    <!-- TODO -->
-                    <!-- Will contain both a black placeholder and the actual preview image -->
-                    <!-- The actual preview image -->
+            <div class="content-block ">
+                <div class="body-section-title">
+                    <h2>
+                        Recent Work
+                        <!-- TODO -->
+                        <!-- Add a line span -->
+                    </h2>
                 </div>
-                <div class="recent-work-info">
-                    <div class="recent-work-title"></div>
-                    <div class="recent-work-tag-group">
-                        <div class="recent-work-tag"></div>
+                <div class="recent-work-card">
+                    <div class="recent-work-preview-img">
+                        <!-- TODO -->
+                        <!-- Will contain both a black placeholder and the actual preview image -->
+                        <!-- The actual preview image -->
                     </div>
-                    <div class="recent-work-description"></div>
-                </div>
-            </div>
-            
-            <div class="recent-work-card">
-                <div class="recent-work-preview-img">
-                    <!-- TODO -->
-                    <!-- Will contain both a black placeholder and the actual preview image -->
-                    <!-- The actual preview image -->
-                </div>
-                <div class="recent-work-info">
-                    <div class="recent-work-title"></div>
-                    <div class="recent-work-tag-group">
-                        <div class="recent-work-tag"></div>
+                    <div class="recent-work-info">
+                        <div class="recent-work-title"></div>
+                        <div class="recent-work-tag-group">
+                            <div class="recent-work-tag"></div>
+                        </div>
+                        <div class="recent-work-description"></div>
                     </div>
-                    <div class="recent-work-description"></div>
                 </div>
-            </div>
-            
-            <div class="recent-work-card">
-                <div class="recent-work-preview-img">
-                    <!-- TODO -->
-                    <!-- Will contain both a black placeholder and the actual preview image -->
-                    <!-- The actual preview image -->
-                </div>
-                <div class="recent-work-info">
-                    <div class="recent-work-title"></div>
-                    <div class="recent-work-tag-group">
-                        <div class="recent-work-tag"></div>
+                
+                <div class="recent-work-card">
+                    <div class="recent-work-preview-img">
+                        <!-- TODO -->
+                        <!-- Will contain both a black placeholder and the actual preview image -->
+                        <!-- The actual preview image -->
                     </div>
-                    <div class="recent-work-description"></div>
+                    <div class="recent-work-info">
+                        <div class="recent-work-title"></div>
+                        <div class="recent-work-tag-group">
+                            <div class="recent-work-tag"></div>
+                        </div>
+                        <div class="recent-work-description"></div>
+                    </div>
                 </div>
+                
+                <div class="recent-work-card">
+                    <div class="recent-work-preview-img">
+                        <!-- TODO -->
+                        <!-- Will contain both a black placeholder and the actual preview image -->
+                        <!-- The actual preview image -->
+                    </div>
+                    <div class="recent-work-info">
+                        <div class="recent-work-title"></div>
+                        <div class="recent-work-tag-group">
+                            <div class="recent-work-tag"></div>
+                        </div>
+                        <div class="recent-work-description"></div>
+                    </div>
+                </div>
+                <div class="carousel-navigator"></div>
             </div>
-
-            <div class="carousel-navigator"></div>
         </section>
     </main>
 
 
     <!-- Footer -->
     <footer>
-        <div class="info" id="contact">
-            <p><i class="fa-solid fa-paper-plane"></i></p>
-            <p>Let's connect!</p>
-            <br>
-            <h2><a href="mailto:danielmanning.design@gmail.com">danielmanning.design@gmail.com</a></h2>
-            <br>
-            <p>I'm always open to new opportunites. I want to continue making and designing products that people enjoy using.</p>
-            <br>
-            <div class="socials" id="socials">
-                <div class="social-link"><a href="https://www.linkedin.com/in/danielmanningdesign/"><i class="fa-brands fa-linkedin"></i></a></div>
-                <div class="social-link"><a href="https://www.behance.net/danielmanningdesign"><i class="fa-brands fa-behance-square"></i></a></div>
-                
+        <div class="info-section" id="contact">
+            <div class="content-block center-text">
+                <p><i class="fa-solid fa-paper-plane"></i></p>
+                <p>Let's connect!</p>
+                <h2><a href="mailto:danielmanning.design@gmail.com">danielmanning.design@gmail.com</a></h2>
+                <p>I'm always open to new opportunites. I want to continue making and designing products that people enjoy using.</p>
+                <div class="socials" id="socials">
+                    <a href="https://www.linkedin.com/in/danielmanningdesign/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.behance.net/danielmanningdesign"><i class="fa-brands fa-behance-square"></i></a>
+                </div>
             </div>
-            <!-- TODO -->
-            <!-- Contact info with mailto functionality -->
         </div>
     </footer>
 </body>
