@@ -1,10 +1,15 @@
 
 :root {
-    --primary: #EDE8DD;
-    --light: #F6F6F1;
+    --primary: #DEF3FF;
+    --light: #E5E5E5;
     --dark: #161616;
     --bright: #FFFFFF;
     --padding-clamp: clamp(20px, 4.89vh, 50px);
+}
+
+@font-face {
+    font-family: 'Print Char 21';
+    src: url('./PrintChar21.ttf')
 }
 
 * {
@@ -40,17 +45,17 @@ footer {
 }
 
 h1 {
-    font-family: "VT323", monospace;
-    font-size: 2rem;
+    font-family: 'Print Char 21', monospace;
+    font-size: 1.5rem;
 }
 
 h2 {
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Print Char 21', monospace;
     font-size: 1rem;
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -66,7 +71,7 @@ a{
 
 .profile-pic {
     vertical-align: top;
-    width: 30em;
+    width: 100%;
     height: auto;
 }
 
@@ -97,6 +102,7 @@ a{
 
 .title-section {
     background-color: var(--primary);
+    min-height: 100%;
 }
 
 .body-section {
