@@ -121,3 +121,15 @@ a{
     z-index: 1;
     align-items: center;
 }
+
+
+/* Modular Code Blocks */
+
+.recent-work-card {
+    height: 100px;
+    width: 40%;
+    background-color: var(--bright);
+    border-radius: 5px;
+    margin: 10px auto;
+    text-align: center;
+}
