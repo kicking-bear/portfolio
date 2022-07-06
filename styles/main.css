@@ -24,9 +24,6 @@ body {
     color: var(--dark);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
-
-    display: flex;
-    flex-direction: column;
 }
 
 header, main {
@@ -45,8 +42,13 @@ footer {
 }
 
 h1 {
-    font-family: 'Print Char 21', monospace;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
     font-size: 1.5rem;
+}
+
+h1 > strong {
+    font-family: 'Print Char 21', monospace;
 }
 
 h2 {
@@ -59,19 +61,25 @@ h3 {
     font-weight: 500;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: inherit;
 }
 
-#profile-pic {
-    text-align: right;
-    right: -100px;
+/* Intro Section */
+
+.menu  a:hover {
+    text-decoration: underline;
+}
+
+#profile-pic-container {
+    width: min(40%, 600px);
+    text-align: center;
 }
 
 .profile-pic {
     vertical-align: top;
-    width: 100%;
+    width: clamp(200px, 70%, 350px);
     height: auto;
 }
 
@@ -116,6 +124,10 @@ a{
     padding-bottom: var(--padding-clamp);
 }
 
+.section-title {
+    margin: 0 auto 30px;
+}
+
 #main-banner {
     gap: 0;
     z-index: 1;
@@ -125,11 +137,26 @@ a{
 
 /* Modular Code Blocks */
 
+/* .recent-work-card {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 50px;
+    height: auto;
+    max-width: 1250px;
+    background-color: var(--bright);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: left;
+} */
+
 .recent-work-card {
     display: flex;
     flex-direction: row;
-    height: 450px;
-    width: 1250px;
+    gap: 30px;
+    height: auto;
+    max-width: 1250px;
     background-color: var(--bright);
     border-radius: 25px;
     padding: 20px;
@@ -137,13 +164,10 @@ a{
     text-align: left;
 }
 
-.rw-image {
-    width: 450px;
-}
-
 .rw-info-block {
-    display: block;
-    margin: auto 70px;
+    margin: auto 0;
+    flex-basis: 700px 400px;
+    flex-shrink: 1 0;
 }
 
 .rw-title {
@@ -156,7 +180,7 @@ a{
 .rw-tag {
     display: inline-block;
     padding: 7px 15px;
-    background-color: #F8C3AC;
+    background-color: #aaaaaa;
     border-radius: 25px;
     font-weight: 500;
     margin: 15px 20px 15px 0;
@@ -172,4 +196,61 @@ a{
 
 .rw-blue {
     background-color: #ACEAF8;
+}
+
+@media only screen and (max-width: 1439px) {
+
+    .section-title {
+        max-width: 490px;
+    }
+
+
+    .recent-work-card {
+        max-width: 490px;
+        max-height: 800px;
+        flex-direction: column;
+        gap: 10px;
+        font-size: min(1rem, 2.5vw);
+    }
+
+    .rw-info-block {
+        margin: 0 15px;
+    }
+
+    .rw-title {
+        font-size: min(1.65rem, 4.5vw);
+        margin: 5px 0;
+        line-height: inherit;
+    }
+
+    .rw-image {
+        flex-basis: 450px 400px;
+        flex-shrink: 1;
+    }
+    
+    .rw-image img {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+    }
+
+    .rw-tag {
+        margin: 5px 10px 5px 0;
+    }
+    
+    .rw-description {
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 1079px) {
+    #main-banner {
+        flex-direction: column;
+        margin: 30px;
+        gap: 50px;
+    }
+
+    #profile-pic-container{
+        width: auto;
+    }
 }
