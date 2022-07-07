@@ -52,7 +52,8 @@ const mainData =
             "tags":
             [
                 "UI Design",
-                "UX Design"
+                "UX Design",
+                "UX Research"
             ],
             "imageSrc": "./img/project1.png",
             "description":
