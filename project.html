@@ -25,7 +25,7 @@
     <body>
         <header>
             <!-- Title Block -->
-            <section class="blue-section" id="title-section">
+            <section class="light-section" id="title-section">
                 <nav class="content-block" id="navbar">
                     <div class="flex-container">
                         <!-- Logo -->
@@ -38,7 +38,7 @@
                         </div>
                         <!-- Horizontal Nav Bar -->
                         <div class="menu top-nav flex-container">
-                            <input type="button" onclick="document.getElementById('recent-work').scrollIntoView();" class="nav-item flex-item" value="Recent Work"/>
+                            <input type="button" onclick="window.location.href='./wip.html#recent-work'" class="nav-item flex-item" value="Recent Work"/>
                             <a class="nav-item flex-item" href="#" onclick="window.open('./data/Daniel Manning Resume 2022.pdf', '_blank').focus()"; return false;>Resume</a>
                             <input type="button" onclick="document.getElementById('contact').scrollIntoView();" class="nav-item flex-item" value="Contact"/>
                         </div>
@@ -57,27 +57,15 @@
                 </div>
                 
 
-                <!-- Descripter/Main Pic -->
-                <div class="content-block">
-                    <div class="flex-container" id="main-banner">
-                        <div class="flex-item" id="slogan">
-                            <h1>Hello, I'm a <span>Designer</span></h1>
-                        </div>
-                        <div class="flex-item" id="profile-pic-container">
-                            <img class="profile-pic" src="img/profilepic.png" alt="Daniel Manning's profile photo">
-                        </div>
-
-                    </div>
-                
-                </div>
+                <!-- Project Banner Pic -->
             </section>
         </header>
         <main>
-            <!-- Recent Work -->
+            <!-- Overview Grid -->
 
-            <!-- My Story -->
+            <!-- Process -->
 
-            <!-- My Life -->
+            <!-- Conclusion -->
 
         </main>
         <footer>
@@ -98,5 +86,5 @@
     </body>
 
     <!-- DOM Scripts to build the main page -->
-    <script type="text/javascript" src="js\main.js"></script>
+    <script type="text/javascript" src="js/project.js"></script>
 </html>

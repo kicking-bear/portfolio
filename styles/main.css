@@ -4,7 +4,7 @@
     --light: #E5E5E5;
     --dark: #161616;
     --bright: #FFFFFF;
-    --padding-clamp: clamp(20px, 4.89vh, 50px);
+    --padding-clamp: clamp(15px, 4.89vw, 50px);
     --shadow-dimensions: 0px 20px 24px 8px rgba(0, 0, 0, 0.15);
     --shadow-dimensions-hover: 0px 20px 24px 8px rgba(0, 0, 0, 0.45);
     --transition-timing: 250ms;
@@ -64,7 +64,8 @@ h2 {
 }
 
 h3 {
-    font-size: 1rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -73,16 +74,28 @@ a {
     text-decoration: inherit;
 }
 
+button {
+    border: none;
+    border-radius:25px;
+    font: inherit;
+}
+
+form {
+    text-align: center;
+}
+
 
 
 
 /*** Common Classes ***/
+/* 
+.logo:focus, .nav-item:focus {
+    border: none;
+    text-decoration: underline;
+} */
 
-.content-block { 
-    overflow-x: hidden;
-    max-width: 1300px;
-    padding: var(--padding-clamp) var(--padding-clamp) 0;
-
+.section-title {
+    margin: 0 auto 30px;
 }
 
 .flex-container {
@@ -94,28 +107,42 @@ a {
     margin: 0 0;
 }
 
+.content-block { 
+    overflow-x: hidden;
+    max-width: 1300px;
+    padding: var(--padding-clamp) var(--padding-clamp) 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 .flex-item {
     margin: 0 0;
+}
+   
+.crop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .center-text {
     text-align: center;
 }
 
-.title-section {
+.blue-section {
     background-color: var(--primary);
-    min-height: 100%;
 }
 
-.body-section {
+.light-section {
     background-color: var(--light);
 }
 
-.section-title {
-    margin: 0 auto 30px;
+.bright-section {
+    background-color: var(--bright);
 }
 
-.info-section {
+.dark-section {
     background-color: var(--dark);
     color: var(--bright);
     line-height: 2rem;
@@ -261,6 +288,10 @@ a {
 
 /* Recent Work Section */
 
+.project-name {
+    margin: 10px auto 100px;
+}
+
 .recent-work-card {
     display: flex;
     flex-direction: row;
@@ -270,8 +301,6 @@ a {
     background-color: var(--bright);
     border-radius: 25px;
     padding: 20px;
-    padding-right: 40px;
-    margin: 10px auto 100px;
     text-align: left;
     font-size: min(1em, 1.5vw);
     box-shadow: var(--shadow-dimensions);
@@ -284,18 +313,23 @@ a {
 }
 
 .rw-image {
-    flex-basis: 450px 400px;
+    flex-basis: 450px;
+    height: auto;
     flex-shrink: 0;
+    border-radius: 30px;
 }
 
 .rw-info-block {
     margin: auto 0;
-    flex-basis: 700px 400px;
-    flex-shrink: 1 0;
+    flex-basis: 700px;
+    height: auto;
+    flex-shrink: 1;
+    padding-right: 20px;
 }
 
 .rw-title {
-    font-size: 2rem;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
     line-height: 42px;
     margin: 15px 0;
@@ -309,6 +343,7 @@ a {
     font-weight: 500;
     margin: min(3%, 15px) 0;
     margin-right: min(20px, 5%);
+    font-size: min(1em, 2vw);
 }
 
 .rw-description {
@@ -319,13 +354,152 @@ a {
 
 
 
+/****** Project Pages ******/
+
+/*** Common Classes ***/
+
+
+/*** Banner ***/
+
+.project-banner {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.proj-banner-img {
+    width: 100%;
+    height: 50vh;
+}
+
+
+
+/*** Overview Grid Section ***/
+
+.proj-grid {
+    font-weight: 500;
+    flex-wrap: wrap;
+    margin: 5vw auto 0;
+    padding: var(--padding-clamp);
+    align-items: center;
+}
+
+.proj-grid-block {
+    display: block;
+    width: clamp(80px, 60vw, 500px);
+    height: auto;
+    margin: 0 auto;
+    font-size: clamp(1em, 1vw, 1.125rem);
+}
+
+.challenge-section {
+    position: relative;
+    margin: 0 auto;
+}
+
+.challenge-flex {
+    position: relative;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.grid-img {
+    width:  min(40vw, 500px);
+    height: auto;
+    border-radius: 25px;
+    align-items: center;
+
+}
+
+.grid-img img {
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+/*** Process Section ***/
+
+#process-section {
+    padding-top: 5rem;
+}
+
+.process-text {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+.process-bullet {
+    margin-left: 2rem;
+    line-height: clamp(2rem, 5vw, 3rem);
+}
+
+.process-img {
+    width: inherit;
+    height: 30vh;
+}
+
+.process-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/*** Conclusion Section ***/
+
+#conclusion-section {
+    padding: min(10vw, 100px);
+}
+
+.conclusion-block {
+    padding: min(2vw, 30px) var(--padding-clamp) var(--padding-clamp);
+}
+
+.conclusion-text {
+    font-weight: 500;
+    padding-bottom: var(--padding-clamp);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+
+
+
+
+/****** Footer Section ******/
+
+#contact {
+    z-index: 2;
+}
+
+
+
 /*** Mobile View ***/
 
 @media only screen and (max-width: 870px) {
 
     /*** Common ***/
-    .section-title {
+    /* .section-title {
         max-width: 490px;
+    } */
+
+    .section-title > h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .section-title > h3 {
+        font-size: clamp(1.25rem, 4vw, 1.5rem);
+    }
+
+    .flex-container {
+        flex-direction: column;
     }
 
 
@@ -348,7 +522,7 @@ a {
     }
 
     .side-nav {
-        font-size: clamp(1rem, 3vw, 1.2rem);
+        font-size: clamp(.7rem, 3vw, 1.2rem);
     }
 
 
@@ -359,30 +533,25 @@ a {
 
     .recent-work-card {
         max-width: 490px;
-        max-height: 800px;
-        flex-direction: column;
+        height: clamp(500px, 125vw, 700px);
         gap: 10px;
-        font-size: min(1rem, 2.5vw);
+        font-size: min(1rem, 3vw);
+
     }
 
     .rw-info-block {
         margin: 0 15px;
+        padding-right: min(20px, .5vw);
     }
 
     .rw-title {
-        font-size: min(1.65rem, 4.5vw);
+        font-size: clamp(1.25rem, 4.5vw, 1.65rem);
         margin: 5px 0;
         line-height: inherit;
     }
 
     .rw-image {
         flex-shrink: 1;
-    }
-    
-    .rw-image img {
-        width: 100%;
-        height: auto;
-        object-fit: fill;
     }
 
     .rw-tag {
@@ -392,13 +561,26 @@ a {
     .rw-description {
         margin: 5px 0;
     }
+
     #main-banner {
-        flex-direction: column;
         margin: 30px;
         gap: 50px;
     }
 
     #profile-pic-container{
         width: auto;
+    }
+
+
+
+    /****** Project Pages ******/
+
+    /*** Grid Section ***/
+    .proj-grid-block {
+        padding-right: min(20px, .5vw);
+    }
+
+    .challenge-background {
+        height: 450px;
     }
 }
