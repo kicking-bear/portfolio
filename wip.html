@@ -26,7 +26,7 @@
                     <div class="flex-container">
                         <!-- Logo -->
                         <div class="flex-item" id="logo">
-                            <a href="index.html">
+                            <a href="./wip.html">
                                 <h2>Daniel Manning</h2>
                                 <p>UX/UI Designer</p>
                                 <p><i class="fa-solid fa-location-dot"></i> NJ, USA</p>
@@ -34,19 +34,22 @@
                         </div>
                         <!-- Horizontal Nav Bar -->
                         <div class="menu top-nav flex-container">
-                            <div class="flex-item"><a href="recent-work.html">Recent Work</a></div>
-                            <div class="flex-item"><a href="about.html">Resume</a></div>
-                            <div class="flex-item"><a href="#contact">Contact</a></div>
+                            <input type="button" onclick="document.getElementById('recent-work').scrollIntoView();" class="nav-item flex-item" value="Recent Work"/>
+                            <a href="./about.html"><input type="button" class="nav-item flex-item" value="Resume"/></a>
+                            <input type="button" onclick="document.getElementById('contact').scrollIntoView();" class="nav-item flex-item" value="Contact"/>
                         </div>
                     </div>
                 </nav>
 
                 <!-- Vertical Nav Bar -->
-                <div class="burgerX"></div>
-                <div class="menu side-nav">
-                    <div class="side-nav-item"><a href="recent-work.html">Recent Work</a></div>
-                    <div class="side-nav-item"><a href="about.html">Resume</a></div>
-                    <div class="side-nav-item"><a href="#contact">Contact</a></div>
+                    <input type="checkbox" id="burger-toggle">
+                    <label for="burger-toggle" class="burgerX"><span></span></label>
+                <div class="side-menu-block">
+                    <div class="menu side-nav">
+                        <input type="button" onClick="document.getElementById('recent-work').scrollIntoView();" class="nav-item side-nav-item" value="Recent Work"/>
+                        <a href="./about.html" target="_blank"><input type="button" class="nav-item side-nav-item" value="Résumé"/></a>
+                        <input type="button" onClick="document.getElementById('contact').scrollIntoView();" class="nav-item side-nav-item" value="Contact"/>
+                    </div>
                 </div>
                 
 

@@ -5,6 +5,9 @@
     --dark: #161616;
     --bright: #FFFFFF;
     --padding-clamp: clamp(20px, 4.89vh, 50px);
+    --shadow-dimensions: 0px 20px 24px 8px rgba(0, 0, 0, 0.15);
+    --shadow-dimensions-hover: 0px 20px 24px 8px rgba(0, 0, 0, 0.45);
+    --transition-timing: 250ms;
 }
 
 @font-face {
@@ -17,6 +20,10 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -122,8 +129,13 @@ a {
 
 /* Nav Section */
 
+.menu .nav-item {
+    background-color: #ffffff00;
+    font: inherit;
+    border: none;
+}
 
-.menu  a:hover {
+.menu  .nav-item:hover {
     text-decoration: underline;
 }
 
@@ -131,26 +143,92 @@ a {
     display: flex;
 }
 
-.burgerX {
-    
-}
-
-.side-nav {
+.side-menu-block {
     display: none;
     position: fixed;
-    background-color: #FFFFFFEE;
-    right: 0;
-    top: 0;
     height: 100vh;
     width: 400px;
+    right: -100%;
+    top: 0;
     margin: 0 auto;
-    padding: 30px 20px;
-    font-size: 2rem;
+    padding: var(--padding-clamp) var(--padding-clamp);
+    background-color: #FFFFFFEE;
+    box-shadow: var(--shadow-dimensions);
+    font-weight: 500;
+    transition-duration: 100ms;
     z-index: 1;
 }
 
+.side-menu-block:hover {
+    box-shadow: var(--shadow-dimensions-hover);
+    transition-duration: 250ms;
+}
+
+
+#burger-toggle {
+    display: none;
+    opacity: 0;
+}
+
+#burger-toggle:checked + .burgerX > span {
+    transform: translateY(.75rem) rotate(45deg);
+}
+
+#burger-toggle:checked + .burgerX > span::before {
+    transform: translateY(-.75rem)rotate(-90deg);
+}
+
+#burger-toggle:checked + .burgerX > span::after {
+    transform: translateY(-1.5rem) rotate(-90deg);
+}
+
+#burger-toggle:checked ~ .side-menu-block {
+    right: 0;
+}
+
+.burgerX {
+    display: none;
+    position: fixed;
+    margin: 0 auto;
+    right: var(--padding-clamp);
+    top: var(--padding-clamp);
+    width: 3rem;
+    height: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.burgerX > span,
+.burgerX > span::before,
+.burgerX > span::after {
+    display: block;
+    position: absolute;
+    background-color: var(--dark);
+    width: 100%;
+    height: .3rem;
+    transition-duration: 250ms;
+}
+
+.burgerX > span::before {
+    content: '';
+    top: .75rem;
+}
+
+.burgerX > span::after {
+    content: '';
+    top: 1.5rem;
+}
+
+.side-nav {
+    height: 100vh;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
 .side-nav-item {
-    margin: 50px 0;
+    margin: 8vh 0 6vh;
+    padding: 30px 100% 30px 0;
+    display: flex;
 }
 
 
@@ -158,9 +236,10 @@ a {
 /* Banner Block */
 
 #main-banner {
-    gap: 0;
+    gap: min(180px, 8vw);
     z-index: 1;
     align-items: center;
+    justify-content: stretch;
 }
 
 #profile-pic-container {
@@ -170,7 +249,7 @@ a {
 
 .profile-pic {
     vertical-align: top;
-    width: clamp(200px, 70%, 350px);
+    width: 100%;
     height: auto;
     padding-bottom: 70px;
 }
@@ -195,12 +274,13 @@ a {
     margin: 10px auto 100px;
     text-align: left;
     font-size: min(1em, 1.5vw);
-    box-shadow: 0px 20px 24px 8px rgba(0, 0, 0, 0.15);
-    transition-duration: 300ms;
+    box-shadow: var(--shadow-dimensions);
+    transition-duration: 100ms;
 }
 
 .recent-work-card:hover {
-    box-shadow: 0px 20px 24px 8px rgba(51, 51, 51, 0.45);
+    box-shadow: var(--shadow-dimensions-hover);
+    transition-duration: 250ms;
 }
 
 .rw-image {
@@ -258,10 +338,17 @@ a {
         display: none;
     }
 
-    .side-nav {
+    .burgerX {
         display: block;
-        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+
+    .side-menu-block {
+        display: block;
         width: min(400px, 45vw);
+    }
+
+    .side-nav {
+        font-size: clamp(1rem, 3vw, 1.2rem);
     }
 
 
