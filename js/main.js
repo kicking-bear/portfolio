@@ -98,7 +98,7 @@ function initializeMain() {
 function generateRWSection(mainTag) {
     recentWorkBlock = doc.createElement('section');
     recentWorkBlock.setAttribute('id','recent-work');
-    recentWorkBlock.classList.add('light-section', 'content-block');
+    recentWorkBlock.classList.add('content-block');
     recentWorkBlock.innerHTML = '<div class="section-title"><h1>Recent Work</h1></div>';
 
     mainTag.appendChild(recentWorkBlock);

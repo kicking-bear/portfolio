@@ -1,7 +1,7 @@
 
 :root {
     --primary: #DEF3FF;
-    --light: #E5E5E5;
+    --light: #F1F1F1;
     --dark: #161616;
     --bright: #FFFFFF;
     --padding-clamp: clamp(15px, 4.89vw, 50px);
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    background-color: var(--light);
+    background-color: var(--bright);
     color: var(--dark);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
@@ -385,15 +385,26 @@ form {
 
 .proj-grid-block {
     display: block;
-    width: clamp(80px, 60vw, 500px);
+    width: clamp(80px, 40vw, 500px);
     height: auto;
     margin: 0 auto;
-    font-size: clamp(1em, 1vw, 1.125rem);
+    font-size: clamp(1em, .5vw, 1.0625rem);
 }
 
 .challenge-section {
     position: relative;
     margin: 0 auto;
+}
+
+.challenge-section::before {
+    content:'';
+    background-color: var(--primary);
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .challenge-flex {
@@ -576,11 +587,16 @@ form {
     /****** Project Pages ******/
 
     /*** Grid Section ***/
+
+    
+
     .proj-grid-block {
         padding-right: min(20px, .5vw);
+        width: clamp(80px, 60vw, 500px);
     }
 
-    .challenge-background {
-        height: 450px;
+    .challenge-section::before {
+        height: 80%;
+        transform: translateY(-30%);
     }
 }

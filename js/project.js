@@ -198,7 +198,9 @@ function generateOverviewGridSection(mainTag) {
 function generateChallengeGridSection(mainTag) {
     let gridSection = doc.createElement('section');
     gridSection.setAttribute('id','challenge-grid-section');
-    gridSection.classList.add('blue-section');
+    gridSection.classList.add('challenge-section');
+    // gridSection.classList.add('blue-section');
+    
 
     let challengeGrid = doc.createElement('div');
     challengeGrid.setAttribute('id', 'challenge-grid');
@@ -249,7 +251,6 @@ function generateGridBlock(gTitle) {
 function generateProcessSection(mainTag){
     let processSection = doc.createElement('section');
     processSection.setAttribute('id','process-section');
-    processSection.classList.add('bright-section');
 
     let processBlock = doc.createElement('div');
     processBlock.classList.add('content-block');
