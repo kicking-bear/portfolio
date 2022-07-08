@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content-block="width=device-width, initial-scale=1.0">
+        <!-- TODO -->
+        <meta name="description" content-block="" />
+        <meta name="author" content-block="" />
+
+        <!-- Fonts from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!-- Main Styles -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="icon" href="./img/profilepic.png">
+
+        <!-- Icon library from Font Awesome -->
+        <script src="https://kit.fontawesome.com/c4db305d90.js" crossorigin="anonymous"></script>
+
+
+        <title>Daniel Manning's Portfolio Site</title>
+    </head>
+    <body>
+        <header>
+            <!-- Title Block -->
+            <section class="blue-section" id="title-section">
+                <nav class="content-block" id="navbar">
+                    <div class="flex-container">
+                        <!-- Logo -->
+                        <div class="logo flex-item" id="logo">
+                            <a href="./index.html">
+                                <h2>Daniel Manning</h2>
+                                <p>UX/UI Designer</p>
+                                <p><i class="fa-solid fa-location-dot"></i> NJ, USA</p>
+                            </a>
+                        </div>
+                        <!-- Horizontal Nav Bar -->
+                        <div class="menu top-nav flex-container">
+                            <input type="button" onclick="document.getElementById('recent-work').scrollIntoView();" class="nav-item flex-item" value="Recent Work"/>
+                            <a class="nav-item flex-item" href="#" onclick="window.open('./data/Daniel Manning Resume 2022.pdf', '_blank').focus()"; return false;>Resume</a>
+                            <input type="button" onclick="document.getElementById('contact').scrollIntoView();" class="nav-item flex-item" value="Contact"/>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Vertical Nav Bar -->
+                <input type="checkbox" id="burger-toggle">
+                <label for="burger-toggle" class="burgerX"><span></span></label>
+                <div class="side-menu-block">
+                    <div class="menu side-nav">
+                        <input type="button" onClick="document.getElementById('recent-work').scrollIntoView();" class="nav-item side-nav-item" value="Recent Work"/>
+                        <a class="nav-item flex-item" href="#" onclick="window.open('./data/Daniel Manning Resume 2022.pdf', '_blank').focus()"; return false;>Resume</a>
+                        <input type="button" onClick="document.getElementById('contact').scrollIntoView();" class="nav-item side-nav-item" value="Contact"/>
+                    </div>
+                </div>
+                
+
+                <!-- Descripter/Main Pic -->
+                <div class="content-block">
+                    <div class="flex-container" id="main-banner">
+                        <div class="flex-item" id="slogan">
+                            <h1>Hello, I'm a <span>Designer</span></h1>
+                        </div>
+                        <div class="flex-item" id="profile-pic-container">
+                            <img class="profile-pic" src="img/profilepic.png" alt="Daniel Manning's profile photo">
+                        </div>
+
+                    </div>
+                
+                </div>
+            </section>
+        </header>
+        <main>
+            <!-- Recent Work -->
+
+            <!-- My Story -->
+
+            <!-- My Life -->
+
+        </main>
+        <footer>
+            <!-- Contact Info -->
+            <div class="dark-section" id="contact">
+                <div class="content-block center-text">
+                    <p><i class="fa-solid fa-paper-plane"></i></p>
+                    <p>Let's connect!</p>
+                    <h2><a href="mailto:danielmanning.design@gmail.com">danielmanning.design@gmail.com</a></h2>
+                    <p>I'm always open to new opportunites. I want to continue making and designing products that people enjoy using.</p>
+                    <div class="socials" id="socials">
+                        <a href="https://www.linkedin.com/in/danielmanningdesign/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.behance.net/danielmanningdesign"><i class="fa-brands fa-behance-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <!-- DOM Scripts to build the main page -->
+    <script type="text/javascript" src="js\main.js"></script>
+</html>
