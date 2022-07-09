@@ -84,6 +84,11 @@ button {
 }
 
 form {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
     text-align: center;
     color: inherit;
 }
@@ -183,6 +188,8 @@ input {
     position: fixed;
 
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     height: 100vh;
     width: 400px;
@@ -202,6 +209,8 @@ input {
 .side-menu-block:hover {
 
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     
     box-shadow: var(--shadow-dimensions-hover);
@@ -316,6 +325,8 @@ input {
     flex-direction: row;
 
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     
     gap: 30px;
@@ -328,13 +339,15 @@ input {
     font-size: min(1em, 1.5vw);
     box-shadow: var(--shadow-dimensions);
     -webkit-box-shadow: var(--shadow-dimensions);
-    -moz-box-shadow: var(--shadow-dimensions-hover);
+    -moz-box-shadow: var(--shadow-dimensions);
     transition-duration: 100ms;
 }
 
 .recent-work-card:hover {
 
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     
     box-shadow: var(--shadow-dimensions-hover);
