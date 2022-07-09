@@ -496,9 +496,14 @@ form {
 
 
 
+
+
+
+
 /*** Mobile View ***/
 
-@media only screen and (max-width: 870px) {
+@media (pointer: coarse),
+only screen and (max-width: 870px) {
 
     /*** Common ***/
     /* .section-title {
