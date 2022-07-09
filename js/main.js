@@ -16,18 +16,18 @@ var myLifeBlock;
 
 
 const cardTemplate = 
-    '<form action="./project.html" method="GET">'
-+      '<button class="project-name" name="project-name" value="">'
-+           '<div class="flex-container recent-work-card">' 
+    '<div class="flex-container recent-work-card">' 
++       '<form action="./project.html" method="GET">'
++           '<button class="project-name" name="project-name" value="">'
 +              '<div class="rw-image crop-image"><img src="" alt=""></div>'
 +              '<div class="rw-info-block">'
 +                   '<div class="rw-title"></div>'
 +                  '<span class="rw-tag-group"></span>'
 +                  '<div class="rw-description"></div>'
 +              '</div>'
-+           '</div>'
-+       '</button>'
-+   '</form>'
++           '</button>'
++       '</form>'
++   '</div>'
     ;
 
 const mainData =
@@ -115,7 +115,7 @@ function generateRWCard() {
 function generateRWCard(rwIndex) {
     let project = mainData['projects'][rwIndex];
     let recentWorkCardContainer = domParser.parseFromString(cardTemplate, "text/html").body;
-    let recentWorkCard = recentWorkCardContainer.getElementsByTagName('button')[0].getElementsByClassName('recent-work-card')[0];
+    let recentWorkCard = recentWorkCardContainer.getElementsByClassName('recent-work-card')[0].getElementsByTagName('button')[0];
 
     recentWorkCardContainer.getElementsByTagName('button')[0].setAttribute("value", project['title']);
 

@@ -199,7 +199,7 @@ input {
     padding: var(--padding-clamp) var(--padding-clamp);
     background-color: #FFFFFFEE;
     box-shadow: var(--shadow-dimensions);
-    -webkit-box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: 0px 20px 24px 8px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: var(--shadow-dimensions);
     font-weight: 500;
     transition-duration: 100ms;
@@ -214,7 +214,7 @@ input {
 
     
     box-shadow: var(--shadow-dimensions-hover);
-    -webkit-box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: 0px 20px 24px 8px rgba(0, 0, 0, 0.45);
     -moz-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
@@ -338,7 +338,7 @@ input {
     text-align: left;
     font-size: min(1em, 1.5vw);
     box-shadow: var(--shadow-dimensions);
-    -webkit-box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: 0px 20px 24px 8px #00000026;
     -moz-box-shadow: var(--shadow-dimensions);
     transition-duration: 100ms;
 }
@@ -351,7 +351,7 @@ input {
 
     
     box-shadow: var(--shadow-dimensions-hover);
-    -webkit-box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: 0px 20px 24px 8px #00000072;
     -moz-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
