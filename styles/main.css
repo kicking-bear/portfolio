@@ -88,6 +88,10 @@ form {
     color: inherit;
 }
 
+input {
+    color: inherit;
+}
+
 
 
 
@@ -185,6 +189,7 @@ form {
     padding: var(--padding-clamp) var(--padding-clamp);
     background-color: #FFFFFFEE;
     box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: var(--shadow-dimensions);
     font-weight: 500;
     transition-duration: 100ms;
     z-index: 1;
@@ -192,6 +197,7 @@ form {
 
 .side-menu-block:hover {
     box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
 
@@ -308,11 +314,13 @@ form {
     text-align: left;
     font-size: min(1em, 1.5vw);
     box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: var(--shadow-dimensions);
     transition-duration: 100ms;
 }
 
 .recent-work-card:hover {
     box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
 
