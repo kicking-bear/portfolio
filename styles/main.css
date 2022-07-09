@@ -181,6 +181,9 @@ input {
 .side-menu-block {
     display: none;
     position: fixed;
+
+    appearance: none;
+
     height: 100vh;
     width: 400px;
     right: -100%;
@@ -190,14 +193,20 @@ input {
     background-color: #FFFFFFEE;
     box-shadow: var(--shadow-dimensions);
     -webkit-box-shadow: var(--shadow-dimensions);
+    -moz-box-shadow: var(--shadow-dimensions);
     font-weight: 500;
     transition-duration: 100ms;
     z-index: 1;
 }
 
 .side-menu-block:hover {
+
+    appearance: none;
+
+    
     box-shadow: var(--shadow-dimensions-hover);
     -webkit-box-shadow: var(--shadow-dimensions-hover);
+    -moz-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
 
@@ -305,6 +314,10 @@ input {
 .recent-work-card {
     display: flex;
     flex-direction: row;
+
+    appearance: none;
+
+    
     gap: 30px;
     height: auto;
     max-width: 1250px;
@@ -315,12 +328,18 @@ input {
     font-size: min(1em, 1.5vw);
     box-shadow: var(--shadow-dimensions);
     -webkit-box-shadow: var(--shadow-dimensions);
+    -moz-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 100ms;
 }
 
 .recent-work-card:hover {
+
+    appearance: none;
+
+    
     box-shadow: var(--shadow-dimensions-hover);
     -webkit-box-shadow: var(--shadow-dimensions-hover);
+    -moz-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
 
