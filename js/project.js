@@ -116,10 +116,11 @@ const mainData =
 function initializeMain() {
     doc = document;
     domParser = new DOMParser();
-    doc.title = fetchTitle();
+    let fetchedTitle = fetchTitle();
+    doc.title = fetchedTitle.replaceAll('-', ' ');
     projectObj = mainData['projects'].find(proj => proj.title == doc.title);
 
-    imageCollectionSrc = doc.title.toLowerCase().replaceAll(" ", "-");
+    imageCollectionSrc = fetchedTitle.toLowerCase();
 
     generateBanner(doc.getElementById('title-section'));
 
@@ -296,12 +297,10 @@ function generateProcessBody(processBlock) {
 
 function generateProcessBullets() {
     let procBulletsList = projectObj['process']['processBullets'];
-    console.log(procBulletsList);
     let procBulletsUL = doc.createElement('ul');
     for(let i=0; i < procBulletsList.length; i++) {
         let bulletPoint = doc.createElement('li');
         bulletPoint.innerHTML = procBulletsList[i];
-        console.log(bulletPoint);
         procBulletsUL.appendChild(bulletPoint);
     }
 
