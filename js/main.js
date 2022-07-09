@@ -89,7 +89,11 @@ const mainData =
 function initializeMain() {
     doc = document;
     domParser = new DOMParser();
-    console.log("meem");
+    console.log(
+        `line 1 space line 1
+line 2 space line 2
+line 3 space line 3`
+    );
     generateRWSection(doc.getElementsByTagName('main')[0]);
 }
 
@@ -108,7 +112,6 @@ function generateRWCard(rwIndex) {
     let project = mainData['projects'][rwIndex];
 
     let projectLink = './project.html?project-name='+project['title'].replaceAll(' ', '-');
-    console.log(projectLink);
 
     let recentWorkCardContainer = domParser.parseFromString(cardTemplate, "text/html").body.getElementsByTagName('a')[0];
     let recentWorkCard = recentWorkCardContainer.getElementsByClassName('recent-work-card')[0];
