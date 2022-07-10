@@ -16,19 +16,16 @@ var myLifeBlock;
 
 
 const cardTemplate = 
-    '<form action="./project.html" method="GET">'
-+      '<button class="project-name" name="project-name" value="">'
-+           '<div class="flex-container recent-work-card">' 
-+              '<div class="rw-image crop-image"><img src="" alt=""></div>'
-+              '<div class="rw-info-block">'
-+                   '<div class="rw-title"></div>'
-+                  '<span class="rw-tag-group"></span>'
-+                  '<div class="rw-description"></div>'
-+              '</div>'
-+           '</div>'
-+       '</button>'
-+   '</form>'
-    ;
+'<a href="" class="project-link">\
+    <div class="flex-container recent-work-card">\
+        <div class="rw-image crop-image"><img src="" alt=""></div>\
+        <div class="rw-info-block">\
+            <div class="rw-title"></div>\
+            <div class="rw-tag-group"></div>\
+            <div class="rw-description"></div>\
+        </div>\
+    </div>\
+</a>';
 
 const mainData =
 {
@@ -92,6 +89,11 @@ const mainData =
 function initializeMain() {
     doc = document;
     domParser = new DOMParser();
+    console.log(
+        `line 1 space line 1
+line 2 space line 2
+line 3 space line 3`
+    );
     generateRWSection(doc.getElementsByTagName('main')[0]);
 }
 
@@ -102,22 +104,18 @@ function generateRWSection(mainTag) {
     recentWorkBlock.innerHTML = '<div class="section-title"><h1>Recent Work</h1></div>';
 
     mainTag.appendChild(recentWorkBlock);
-}
 
-function generateRWCard() {
-
-    let recentWorkCardContainer = domParser.parseFromString(cardTemplate, "text/html").body;
-    let recentWorkCard = recentWorkCardContainer.getElementsByTagName('button')[0].getElementsByClassName('recent-work-card')[0];
-
-    return recentWorkCardContainer;
+    generateRWCardGroup();
 }
 
 function generateRWCard(rwIndex) {
     let project = mainData['projects'][rwIndex];
-    let recentWorkCardContainer = domParser.parseFromString(cardTemplate, "text/html").body;
-    let recentWorkCard = recentWorkCardContainer.getElementsByTagName('button')[0].getElementsByClassName('recent-work-card')[0];
 
-    recentWorkCardContainer.getElementsByTagName('button')[0].setAttribute("value", project['title']);
+    let projectLink = './project.html?project-name='+project['title'].replaceAll(' ', '-');
+
+    let recentWorkCardContainer = domParser.parseFromString(cardTemplate, "text/html").body.getElementsByTagName('a')[0];
+    let recentWorkCard = recentWorkCardContainer.getElementsByClassName('recent-work-card')[0];
+    recentWorkCardContainer.setAttribute("href", projectLink);
 
     recentWorkCard.getElementsByClassName('rw-image')[0].getElementsByTagName('img')[0].src = project['imageSrc'];
     recentWorkCard.getElementsByClassName('rw-title')[0].innerHTML = project['title'];
@@ -141,11 +139,6 @@ function generateRWCard(rwIndex) {
     return recentWorkCardContainer;
 }
 
-function addNewRWCard() {
-    let card = generateRWCard();
-    recentWorkBlock.appendChild(card);
-}
-
 function addNewRWCard(rwIndex) {
     let card = generateRWCard(rwIndex);
     recentWorkBlock.appendChild(card);
@@ -158,5 +151,3 @@ function generateRWCardGroup() {
 }
 
 initializeMain();
-
-generateRWCardGroup();

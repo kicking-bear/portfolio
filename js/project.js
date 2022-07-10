@@ -13,7 +13,7 @@ var imageCollectionSrc;
 const bannerTemplate = 
     '<div class="project-banner">\
         <div class="crop-image proj-banner-img"><img src="" alt=""></div>\
-        <div class="proj-title"></div>\
+        <div class="content-block proj-title"></div>\
         </div>\
     </div>';
 
@@ -69,7 +69,7 @@ const mainData =
         {
             "title": "Market Your Firm",
             
-            "overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             "role": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             "challenge": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             
@@ -116,10 +116,11 @@ const mainData =
 function initializeMain() {
     doc = document;
     domParser = new DOMParser();
-    doc.title = fetchTitle();
+    let fetchedTitle = fetchTitle();
+    doc.title = fetchedTitle.replaceAll('-', ' ');
     projectObj = mainData['projects'].find(proj => proj.title == doc.title);
 
-    imageCollectionSrc = doc.title.toLowerCase().replaceAll(" ", "-");
+    imageCollectionSrc = fetchedTitle.toLowerCase();
 
     generateBanner(doc.getElementById('title-section'));
 
@@ -133,9 +134,9 @@ function initializeMain() {
 function fetchTitle(){
     let pageURL = window.location.search;
     let pageParams = new URLSearchParams(pageURL);
-    let projectTitle = pageParams.get('project-name');
+    let fetchedTitle = pageParams.get('project-name');
 
-    return projectTitle;
+    return fetchedTitle;
 }
 
 
@@ -144,8 +145,9 @@ function fetchTitle(){
 
 function generateBanner(titleSection) {
     
-    let bannerBlock = domParser.parseFromString(bannerTemplate, "text/html").body;
-    
+    let bannerBlock = domParser.parseFromString(bannerTemplate, "text/html").body.getElementsByClassName('project-banner')[0];
+    bannerBlock.getElementsByClassName('proj-title')[0].innerHTML = doc.title;
+
     let bannerSrc = "./img/projects/" + imageCollectionSrc + "/banner.png";
     bannerBlock.getElementsByClassName('proj-banner-img')[0].getElementsByTagName('img')[0].setAttribute('src', bannerSrc);
 
@@ -168,25 +170,12 @@ function generateOverviewGridSection(mainTag) {
     projGrid.setAttribute('id', 'proj-grid-container');
     projGrid.classList.add('flex-container', 'proj-grid');
 
-    // let gridRow2 = doc.createElement('div');
-    // let challengeSection = doc.createElement('div');
-    // challengeSection.classList.add('challenge-section');
-    // let challengeBackground = doc.createElement('div');
-    // challengeBackground.classList.add('challenge-background');
-    // gridRow2.setAttribute('id', 'grid-row-2');
-    // gridRow2.classList.add('flex-container', 'proj-grid', 'challenge-flex');
-
-    // let projGrid = doc.createElement('div');
     projGrid.setAttribute('id', 'proj-grid-container');
     projGrid.classList.add('content-block');
 
     projGrid.appendChild(generateGridBlock("overview"));
     projGrid.appendChild(generateGridBlock("role"));
-    // gridRow2.appendChild(generateGridBlock("img"));
-    // gridRow2.appendChild(generateGridBlock("challenge"));
-    // challengeSection.appendChild(challengeBackground);
-    // challengeSection.appendChild(gridRow2);
-    // projGrid.appendChild(challengeSection);
+    
     gridSection.appendChild(projGrid);
 
     mainTag.appendChild(gridSection);
@@ -199,7 +188,6 @@ function generateChallengeGridSection(mainTag) {
     let gridSection = doc.createElement('section');
     gridSection.setAttribute('id','challenge-grid-section');
     gridSection.classList.add('challenge-section');
-    // gridSection.classList.add('blue-section');
     
 
     let challengeGrid = doc.createElement('div');
@@ -296,12 +284,10 @@ function generateProcessBody(processBlock) {
 
 function generateProcessBullets() {
     let procBulletsList = projectObj['process']['processBullets'];
-    console.log(procBulletsList);
     let procBulletsUL = doc.createElement('ul');
     for(let i=0; i < procBulletsList.length; i++) {
         let bulletPoint = doc.createElement('li');
         bulletPoint.innerHTML = procBulletsList[i];
-        console.log(bulletPoint);
         procBulletsUL.appendChild(bulletPoint);
     }
 

@@ -78,19 +78,16 @@ a {
 
 button {
     border: none;
-    border-radius:25px;
+    border-radius: 5%;
     font: inherit;
     color: inherit;
+    background: inherit;
+
 }
 
 form {
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    text-align: center;
-    color: inherit;
+    width: auto;
+    height: auto;
 }
 
 input {
@@ -101,11 +98,6 @@ input {
 
 
 /*** Common Classes ***/
-/* 
-.logo:focus, .nav-item:focus {
-    border: none;
-    text-decoration: underline;
-} */
 
 .section-title {
     margin: 0 auto 30px;
@@ -186,11 +178,6 @@ input {
 .side-menu-block {
     display: none;
     position: fixed;
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
     height: 100vh;
     width: 400px;
     right: -100%;
@@ -199,7 +186,7 @@ input {
     padding: var(--padding-clamp) var(--padding-clamp);
     background-color: #FFFFFFEE;
     box-shadow: var(--shadow-dimensions);
-    -webkit-box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: 0px 20px 24px 8px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: var(--shadow-dimensions);
     font-weight: 500;
     transition-duration: 100ms;
@@ -207,14 +194,8 @@ input {
 }
 
 .side-menu-block:hover {
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    
     box-shadow: var(--shadow-dimensions-hover);
-    -webkit-box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: 0px 20px 24px 8px rgba(0, 0, 0, 0.45);
     -moz-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
@@ -316,42 +297,27 @@ input {
 
 /* Recent Work Section */
 
-.project-name {
-    margin: 10px auto 100px;
-}
-
 .recent-work-card {
     display: flex;
     flex-direction: row;
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    
     gap: 30px;
     height: auto;
     max-width: 1250px;
     background-color: var(--bright);
     border-radius: 25px;
     padding: 20px;
+    margin: 10px auto 100px;
     text-align: left;
     font-size: min(1em, 1.5vw);
     box-shadow: var(--shadow-dimensions);
-    -webkit-box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: 0px 20px 24px 8px #00000026;
     -moz-box-shadow: var(--shadow-dimensions);
     transition-duration: 100ms;
 }
 
 .recent-work-card:hover {
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    
     box-shadow: var(--shadow-dimensions-hover);
-    -webkit-box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: 0px 20px 24px 8px #00000072;
     -moz-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
@@ -406,13 +372,38 @@ input {
 /*** Banner ***/
 
 .project-banner {
+    display: flex;
+    position: relative;
     margin-top: 5%;
     margin-bottom: 5%;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+}
+
+.proj-title {
+    margin: auto;
+    font-weight: 600;
+    font-size: 3.375rem;
+    color: var(--light);
+    text-transform: uppercase;
 }
 
 .proj-banner-img {
+    position: absolute;
     width: 100%;
     height: 50vh;
+    z-index: -1;
+}
+
+.proj-banner-img::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #22222200;
+    background: linear-gradient(20deg, #222222ff, #22222244 80%, #22222200);
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -424,7 +415,6 @@ input {
     flex-wrap: wrap;
     margin: 5vw auto 0;
     padding: var(--padding-clamp);
-    align-items: center;
 }
 
 .proj-grid-block {
@@ -546,9 +536,6 @@ input {
 only screen and (max-width: 870px) {
 
     /*** Common ***/
-    /* .section-title {
-        max-width: 490px;
-    } */
 
     .section-title > h1 {
         font-size: clamp(1.5rem, 5vw, 2rem);
@@ -636,8 +623,6 @@ only screen and (max-width: 870px) {
     /****** Project Pages ******/
 
     /*** Grid Section ***/
-
-    
 
     .proj-grid-block {
         padding-right: min(20px, .5vw);
