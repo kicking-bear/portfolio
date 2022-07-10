@@ -24,7 +24,7 @@ const mainData =
         {
             "title": "Salamone",
             
-            "overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "overview": "Internet Brands proprietary website builder WebManager, underwent a complete overhaul in 2020. This 2.0 version required a rework of many of the main core components and modules.\nThere was push to make the settings more user-friendly.\nI was in charge of leading a design change for the logo module. We needed a way to test the resizing option and so I created the prototype, drafted the questionnaire, and led the UX research for this project.",
             "role": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             "challenge": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             
