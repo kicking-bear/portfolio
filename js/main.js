@@ -14,6 +14,15 @@ var myStoryBlock;
 var myLifeBlock;
 
 
+const bannerText = 
+[
+    "Designer",
+    "Designer",
+    "Designer",
+    "Designer",
+    "Designer"
+]
+
 
 const cardTemplate = 
 '<a href="" class="project-link">\
@@ -38,15 +47,14 @@ const mainData =
     "projects":
     [
         {
-            "title": "Salamone",
+            "title": `Salamone`,
             "tags":
             [
                 "UX Research",
                 "UX Design"
             ],
-            "imageSrc": "./img/project0.png",
             "description":
-                "Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs."
+                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
         },
         {
             "title": "Logo Module",
@@ -56,9 +64,8 @@ const mainData =
                 "UX Design",
                 "UX Research"
             ],
-            "imageSrc": "./img/project1.png",
             "description":
-                "Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs."
+                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
         },
         {
             "title": "Market Your Firm",
@@ -66,9 +73,8 @@ const mainData =
             [
                 "UI Design"
             ],
-            "imageSrc": "./img/project2.png",
             "description":
-                "Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs."
+                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
         },
         {
             "title": "Captorra Banner Animation",
@@ -78,9 +84,8 @@ const mainData =
                 "UX Design",
                 "UX Research"
             ],
-            "imageSrc": "./img/project1.png",
             "description":
-                "Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs."
+                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
         }
     ]
 };
@@ -89,11 +94,6 @@ const mainData =
 function initializeMain() {
     doc = document;
     domParser = new DOMParser();
-    console.log(
-        `line 1 space line 1
-line 2 space line 2
-line 3 space line 3`
-    );
     generateRWSection(doc.getElementsByTagName('main')[0]);
 }
 
@@ -117,7 +117,9 @@ function generateRWCard(rwIndex) {
     let recentWorkCard = recentWorkCardContainer.getElementsByClassName('recent-work-card')[0];
     recentWorkCardContainer.setAttribute("href", projectLink);
 
-    recentWorkCard.getElementsByClassName('rw-image')[0].getElementsByTagName('img')[0].src = project['imageSrc'];
+    let rwImageSrc = ("./img/projects/" + project['title'] + "/card.png").toLowerCase().replaceAll(" ", "-");
+    recentWorkCard.getElementsByClassName('rw-image')[0].getElementsByTagName('img')[0].src = rwImageSrc;
+    
     recentWorkCard.getElementsByClassName('rw-title')[0].innerHTML = project['title'];
 
     let tagGroup = recentWorkCard.getElementsByClassName('rw-tag-group')[0];
