@@ -25,7 +25,7 @@ const bannerText =
 
 
 const cardTemplate = 
-'<a href="" class="project-link">\
+'<a href="" class="content-block project-link">\
     <div class="flex-container recent-work-card">\
         <div class="rw-image crop-image"><img src="" alt=""></div>\
         <div class="rw-info-block">\
@@ -85,7 +85,8 @@ const mainData =
                 "UX Research"
             ],
             "description":
-                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
+                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs. 
+                Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell.`
         }
     ]
 };

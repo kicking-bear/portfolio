@@ -32,7 +32,7 @@ body {
     background-color: var(--bright);
     color: var(--dark);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 header, main {
@@ -47,7 +47,7 @@ footer {
     width: 100%;
     bottom: 0;
 
-    flex-shrink: 0;;
+    flex-shrink: 0;
 }
 
 h1 {
@@ -83,11 +83,6 @@ button {
     color: inherit;
     background: inherit;
 
-}
-
-form {
-    width: auto;
-    height: auto;
 }
 
 input {
@@ -186,8 +181,7 @@ input {
     padding: var(--padding-clamp) var(--padding-clamp);
     background-color: #FFFFFFEE;
     box-shadow: var(--shadow-dimensions);
-    -webkit-box-shadow: 0px 20px 24px 8px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: 0px 20px 24px 8px var(--shadow-dimensions);
     font-weight: 500;
     transition-duration: 100ms;
     z-index: 1;
@@ -195,8 +189,7 @@ input {
 
 .side-menu-block:hover {
     box-shadow: var(--shadow-dimensions-hover);
-    -webkit-box-shadow: 0px 20px 24px 8px rgba(0, 0, 0, 0.45);
-    -moz-box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: 0px 20px 24px 8px var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
 
@@ -301,39 +294,38 @@ input {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    height: auto;
+    height: 490px;
     max-width: 1250px;
     background-color: var(--bright);
     border-radius: 25px;
-    padding: 20px;
-    margin: 10px auto 100px;
+    padding: 3%;
+    margin: 10px auto 60px;
     text-align: left;
-    font-size: min(1em, 1.5vw);
     box-shadow: var(--shadow-dimensions);
-    -webkit-box-shadow: 0px 20px 24px 8px #00000026;
-    -moz-box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: var(--shadow-dimensions);
     transition-duration: 100ms;
 }
 
 .recent-work-card:hover {
     box-shadow: var(--shadow-dimensions-hover);
-    -webkit-box-shadow: 0px 20px 24px 8px #00000072;
-    -moz-box-shadow: var(--shadow-dimensions-hover);
+    -webkit-box-shadow: var(--shadow-dimensions);
     transition-duration: 250ms;
 }
 
 .rw-image {
-    flex-basis: 450px;
-    height: auto;
-    flex-shrink: 0;
-    border-radius: 30px;
+    width: 45%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+.rw-image img {
+    border-radius: 10%;
 }
 
 .rw-info-block {
     margin: auto 0;
-    flex-basis: 700px;
+    width: 55%;
     height: auto;
-    flex-shrink: 1;
     padding-right: 20px;
 }
 
@@ -341,23 +333,22 @@ input {
     text-transform: uppercase;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
-    line-height: 42px;
-    margin: 15px 0;
+    margin: min(15px, 3%) 0;
 }
 
 .rw-tag {
     display: inline-block;
-    padding: 7px 15px;
+    padding: 5px 15px;
     background-color: #aaaaaa;
     border-radius: 25px;
     font-weight: 500;
-    margin: min(3%, 15px) 0;
-    margin-right: min(20px, 5%);
-    font-size: min(1em, 2vw);
+    margin: min(2%, 15px) 0;
+    margin-right: min(20px, 3%);
+    font-size: clamp(.85rem, 1.5vw, 1rem);
 }
 
 .rw-description {
-    margin: 15px 0;
+    margin: min(15px, 3%) 0;
 }
 
 
@@ -410,7 +401,6 @@ input {
 /*** Overview Grid Section ***/
 
 .proj-grid {
-    font-weight: 500;
     flex-wrap: wrap;
     margin: 5vw auto 0;
     padding: var(--padding-clamp);
@@ -476,7 +466,6 @@ input {
 .process-text {
     margin-top: 5vw;
     margin-bottom: 5vw;
-    font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 .process-bullet {
@@ -568,7 +557,7 @@ only screen and (max-width: 870px) {
     }
 
     .side-nav {
-        font-size: clamp(.7rem, 3vw, 1.2rem);
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
     }
 
 
@@ -578,26 +567,34 @@ only screen and (max-width: 870px) {
     /* Recent Work */
 
     .recent-work-card {
-        max-width: 490px;
-        height: clamp(500px, 125vw, 700px);
+        flex-flow: column;
+        min-width: 60vw;
+        width: min(68vw, 70vh);
+        min-height: 650px;
+        height: min(80vw, 75vh);
         gap: 10px;
-        font-size: min(1rem, 3vw);
+        justify-content: flex-start;
 
-    }
-
-    .rw-info-block {
-        margin: 0 15px;
-        padding-right: min(20px, .5vw);
-    }
-
-    .rw-title {
-        font-size: clamp(1.25rem, 4.5vw, 1.65rem);
-        margin: 5px 0;
-        line-height: inherit;
     }
 
     .rw-image {
-        flex-shrink: 1;
+        width: 100%;
+        min-height: 35vw;
+        height: min(30vh, 50%);
+    }
+
+    .rw-info-block {
+        padding-right: min(20px, .5vw);
+        margin: 0;
+        height: auto;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .rw-title {
+        font-size: clamp(1.25rem, 3.5vw, 1.65rem);
+        margin: 5px 0;
+        line-height: inherit;
     }
 
     .rw-tag {
@@ -605,7 +602,7 @@ only screen and (max-width: 870px) {
     }
     
     .rw-description {
-        margin: 5px 0;
+        margin: 5px 0 0;
     }
 
     #main-banner {
