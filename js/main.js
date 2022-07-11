@@ -42,7 +42,10 @@ const mainData =
     {
         "UX Research": "#F8C3AC",
         "UX Design": "#ACEAF8",
-        "UI Design": "#DFF8AC"
+        "UI Design": "#DFF8AC",
+        "Prototyping": "#F8ECAC",
+        "Vis Dev": "#ACAFF8",
+        "Motion Design": "#F6ACF8"
     },
     "projects":
     [
@@ -50,43 +53,44 @@ const mainData =
             "title": `Salamone`,
             "tags":
             [
-                "UX Research",
-                "UX Design"
+                "UX Design",
+                "Vis Dev",
+                "UI Design"
             ],
             "description":
-                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
+                `Led the design refresh for one of our most high-profile clients at Martindale-Hubbell. From stylescapes to wireframes and completed designs. I was challenged with making their site more transparent and user-friendly.`
         },
         {
             "title": "Logo Module",
             "tags":
             [
-                "UI Design",
                 "UX Design",
-                "UX Research"
+                "UX Research",
+                "Prototyping"
             ],
             "description":
-                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
+                `Led the design proposal for new features on the logo module for WebManager. Created the prototype, drafted the questionaire, led the tests, and presented the results to development.`
         },
         {
             "title": "Market Your Firm",
             "tags":
             [
+                "UX Design",
+                "Vis Dev",
                 "UI Design"
             ],
             "description":
-                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`
+                `Market Your Firm was my first design lead project at Martindale-Hubbell. This project was centered on making clear product offerings as well as defining the business.`
         },
         {
             "title": "Captorra Banner Animation",
             "tags":
             [
-                "UI Design",
-                "UX Design",
-                "UX Research"
+                "Motion Design",
+                "Vis Dev"
             ],
             "description":
-                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs. 
-                Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell.`
+                `During the pandemic Captorra underwent a massive refresh of their site and branding. Using Lottie and After Effects I created a simple banner animation for their new site.`
         }
     ]
 };

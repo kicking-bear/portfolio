@@ -21,128 +21,202 @@ const mainData =
 {
     "projects":
     [
+        /** Salamone **/
         {
             "title": "Salamone",
             
             "overview": 
-                `Internet Brands proprietary website builder WebManager, underwent a complete overhaul in 2020. This 2.0 version required a rework of many of the main core components and modules.<br>
-<br>
-                There was push to make the settings more user-friendly.<br>
-<br>
-                I was in charge of leading a design change for the logo module. We needed a way to test the resizing option and so I created the prototype, drafted the questionnaire, and led the UX research for this project.`,
+                `Bryan L. Salamone & Associates P.C. is a high profile client for Martindale-Hubbell. They requested a refresh of their site based on a change in philosophy and newly adopted business language.<br>
+                <br>
+                The law firm has become a mainstay in Long Island, NY so they wanted their new site to reflect a more established business.<br>
+                <br>
+                They also wanted to move away from aggressive imagery and content to amicable.`,
             "role": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `<strong>Lead Designer</strong><br>
+                <br>
+                UX Design, Visual Design`,
             "challenge": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `This site was designed to be completely custom. I needed to create a site that reflected the company's new vision as well as implement some good UX practices that were missing from the old design.<br>
+                <br>
+                Navigation was busy, sections within the site were not clearly dilineated, and pricing was not readily transparent.<br>
+                <br>
+                I was tasked with designing the new site from the ground up and to incorporate some core components from the old one.`,
             
             "process": 
             {
                 "processIntro": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `We started with a design prompt and critique of Salamone's old site.`,
                 "processBody": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `The team then came up with three designs from three separate designers. Out of the three, my design was selected from a presentation meeting with Bryan L. Salamone.<br>
+                    <br>
+                    Our designs were guided by the client's needs and requests:`,
                 "processBullets":
                 [
-                    `Process bullet point 1`,
-                    `Process bullet point 2`,
-                    `Process bullet point 3`
+                    `Transparency with pricing (a focus on the contested divorce package)`,
+                    `Highlight the pricing, almost no divorce attorney in Long Island, NY offers the rates his firm offers`,
+                    `Shift from language and imagery that's aggressive, and instead focus on amicable guidance through the legal process`,
+                    `Move from "singular attorney" to "established legal team"`
                 ],
                 "processConclusion": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                    `My design went through several rounds of revisions before passing off to the developers to build.<br>
+                    <br>
+                    Every design choice had to be purposeful. This project is one of the few we do this directly with clients and Bryan L. Salamone in particular is very thorough.`
             },
             
             "conclusion": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                `The design was a lot of fun to do. The developers had little to no issue or questions with the design either. The only real challenge was adjusting the pricing section to be responsive, but I believe I found an elegant solution for this too.<br>
+                <br>
+                I believe the final result is a cleaner, more inviting, and interesting websit refresh.`
         },
+
+        /** Logo Module **/
         {
             "title": "Logo Module",
             
             "overview": 
-                `Created and led the base design for one of our major front-facing business sites at Martindale-Hubbell. My design was pushed and approved by the project managers, working closely with the team to meet their business needs.`,
+                `Internet Brands proprietary website builder WebManager, underwent a complete overhaul in 2020. This 2.0 version required a rework of many of the main core components and modules.<br>
+                <br>
+                There was push to make the settings more user-friendly.<br>
+                <br>
+                I was in charge of leading a design change for the logo module. We needed a way to test the resizing option and so I created the prototype, drafted the questionnaire, and led the UX research for this project.`,
             "role": 
                 `<strong>Lead Designer</strong><br>
                 <br>
                 UX Design, Research, Interaction, Visual Design, Prototyping & Testing`,
             "challenge": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `The main challenge with this project were the limitations with WebManager itself.  We were constrained with what we could actually change.<br>
+                <br>
+                One of the main issues with the logo module is the inability to ”preview”. We found that users struggled with understanding how large or small their logo would look on the site.<br>
+                <br>
+                We also wanted to provide a way for users to resize their logo through the site instead of having to reupload a new image that had been cropped or resized externally.`,
             
             "process": 
             {
                 "processIntro": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `The process for running this test was to first identify the the needs of the user. I shaped our testing questions and prompts to gain insight on how users were interacting with proposal for new features to resize the logo on the site directly.`,
                 "processBody": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `We wanted to move away from language involving pixels and try to focus on indicators that are more generalized. We experimented with sliders and percentages.<br>
+                    <br>
+                    The process of linking a prototype of this scale took quite a while. I had to account for so many different options. I designed the prototype based on user personas created with traits and common needs our client-base.<br>
+                    <br>
+                    I drafted the questionaire and recruited people from around the office, from all different departments, to do conduct our tests over Google Hangouts with the use of screenshare.<br>
+                    <br>
+                    Our team was mainly concerned with three things:`,
                 "processBullets":
                 [
-                    `Process bullet point 1`,
-                    `Process bullet point 2`,
-                    `Process bullet point 3`
+                    `How are users interacting with the module?`,
+                    `How are they understanding the “resizing” tools and features?`,
+                    `What are their first impressions of our proposed featureset?`
                 ],
                 "processConclusion": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                    `You can see a copy of the template questionnaire <a href="./data/User Test Script [Template].pdf">here</a>.`
             },
             
             "conclusion": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                `Difficulty and success rates remained pretty consistent between the two main options: slider and percentage input. There was also an even preference for both, with three testers siding with each of the two resizing options.<br>
+                <br>
+                We were surprised that time to complete a task, didn't necessarily relate to familiarity with WebManager. It seems that clients who have experience with other site building tools: Wix, Wordpress, Squarespace, were often able to complete the task faster. This is consistent with Jakob's Law.<br>
+                <br>
+                In a meeting with the developers we discussed our findings and the difficulties with implementing some of our proposals.<br>
+                <br>
+                We came to a compromise based on these findings to simplify the options and make them more visible within the first click.`
                 
         },
+        
+        /** Market Your Firm **/
         {
             "title": "Market Your Firm",
             
             "overview": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `Market Your Firm is one of Martindale-Hubbell's front facing business sites.<br>
+                <br>
+                The original layout of the website (and still current layout) is arguably choppy and unclear. Stakeholders and project managers wanted a redesign that clearly showed product offerings with simplified navigation.<br>
+                <br>
+                My design was selected as the favorite but developer priority to build it out eventually faded. This was the first of many projects I would come to work on at Martindale-Hubbell.`,
             "role": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `<strong>Lead Designer</strong><br>
+                <br>
+                UX Design, Visual Design`,
             "challenge": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `The main challenge of this design was defining the sites purpose and communicating this to users.<br>
+                <br>
+                In order to boost SEO there needs to be plenty of content, but this often runs into contradictions with good UX practices. Users should be able to navigate the site efficiently and while many don't consider blocks of text as UI, it still is an important element to overall layout.`,
             
             "process": 
             {
                 "processIntro": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `This design went through several rounds starting with wireframes and slowly building up different sections of the site.`,
                 "processBody": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `In the original design, I had carosel to help split up one of the sections and to hide extraneous information. The site has too much cluttered information.<br>
+                    <br>
+                    This was a point of contention for a while. I learned that in meetings with stakeholders and project managers you have to be flexible and build off of pushback.<br>
+                    <br>
+                    In the end I was able to break up the information more consistently and with the feedback, create a better designs.<br>
+                    <br>
+                    Now product offerings were more clear and transparent on the homepage. The featured blocks just below the banner also help with user navigation.<br>
+                    <br>
+                    We had to consider our user base for this site - Lawyers that are looking for ways to boost their online presence. Our main demographic are usually older in age, with minimal essential computer experience.<br>
+                    <br>
+                    The site was redesigned to cater to this audience as well as reflect a more cohesive product and information offering.`,
                 "processBullets":
-                [
-                    `Process bullet point 1`,
-                    `Process bullet point 2`,
-                    `Process bullet point 3`
-                ],
+                [],
                 "processConclusion": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                    ``
             },
             
             "conclusion": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                `The design was approved all the way to until it was going to be built. The project ultimately fell to the bottom of a larger priority list with plans to come back to it.<br>
+                <br>
+                This was one of my first projects at Martindale-Hubbell and regardless of anything, I was proud of what I created and more importantly, grateful I got to experience the process.`
         },
+        
+        /** Captorra Banner Animation **/
         {
             "title": "Captorra Banner Animation",
             
             "overview": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `Captorra is one of the larger businesses falling under Martindale-Hubbell's umbrella. Captorra is an intake and lead management system for lawyers and firms.<br>
+                <br>
+                Arguably the most essential part of a law firm's practice is generating leads, and not just leads, but quality ones.<br>
+                <br>
+                This redesign was coming at the surge of the pandemic and they wanted a full rebrand of their logo and site.<br>
+                <br>
+                My colleague created a fantastic design for both the site and the logo.<br>
+                <br>
+                Along with the refresh they wanted the site to capture attention, so they began proposing web animations. Something that the company has never ventured before.`,
             "role": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `<strong>Motion Designer</strong><br>
+                <br>
+                Motion Designer`,
             "challenge": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                `Balancing web animations with good UX design becomes very delicate fast. Things like site speed or user retention, tend to take a hit when a site goes overboard with animations.<br>
+                <br>
+                Animations for button and interactive elements are generally safe but I was tasked with creating an animation for something purely aesthetic.`,
             
             "process": 
             {
                 "processIntro": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `I started with some competitive research. One of the main challenges with this section was my inexperience. Before this project I had little to no experience with animation before. Especially on the web.`,
                 "processBody": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `,
+                    `We have a talented group of developers on our team and I'm sure they could create whatever I designed but I knew the scale of priority would shift the more the developers would actually have to do.<br>
+                    <br>
+                    Before Lottie became as popular as it is now, I followed a YouTube tutorial on how to export After Effects animations to usable code.<br>
+                    <br>
+                    After playing around with different designs, I landed on three key design criteria for myself:`,
                 "processBullets":
                 [
-                    `Process bullet point 1`,
-                    `Process bullet point 2`,
-                    `Process bullet point 3`
+                    `Animation has to be quick`,
+                    `Visually simplified`,
+                    `Has to serve a purpose`
                 ],
                 "processConclusion": 
-                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                    `I ended up creating an animation for the icons, Captorra, wanted to implement. The animation would be at the top to draw visitors of the site and give them quick visual information about the site, the business, and what they're offering.<br>
+                    <br>
+                    Creating an animation through Lottie ended up being the right choice because it made it much easier for the developers to tweak and to implement on the actual site.`
             },
             
             "conclusion": 
-                `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. `
+                `Since this project I've had a lot more time to experiment with animation in After Effects. I've also moved onto projects at Internet Brands to incorporate basic animations to the website builder itself WebManager.`
         },
     ]
 }; 
@@ -300,7 +374,7 @@ function generateProcessBody(processBlock) {
     processIntro.classList.add('process-text');
     processBanner.classList.add('crop-img', 'process-img');
     processBody.classList.add('process-text');
-    processBullets.classList.add('process-text', 'process-bullet');
+    processBullets.classList.add('process-text', 'process-bullets');
     processConclusion.classList.add('process-text');
 
     processIntro.innerHTML = projectObj['process']['processIntro'];

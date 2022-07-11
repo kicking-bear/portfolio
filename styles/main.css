@@ -38,7 +38,7 @@ body {
 header, main {
     position: relative;
     width: 100%;
-
+    overflow-x: hidden;
     flex: 1 0 auto;
 }
 
@@ -308,7 +308,7 @@ input {
 
 .recent-work-card:hover {
     box-shadow: var(--shadow-dimensions-hover);
-    -webkit-box-shadow: var(--shadow-dimensions);
+    -webkit-box-shadow: var(--shadow-dimensions-hover);
     transition-duration: 250ms;
 }
 
@@ -443,13 +443,13 @@ input {
 .grid-img {
     width:  min(40vw, 500px);
     height: auto;
-    border-radius: 25px;
+    border-radius: 10%;
     align-items: center;
 
 }
 
 .grid-img img {
-    border-radius: 25px;
+    border-radius: 10%;
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -461,16 +461,29 @@ input {
 
 #process-section {
     padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .process-text {
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.process-bullet {
-    margin-left: 2rem;
-    line-height: clamp(2rem, 5vw, 3rem);
+.process-text a {
+    font-weight: 500;
+    color: #1e8fc4;
+    text-decoration: underline;
+}
+
+.process-text a:hover {
+    font-weight: 600;
+}
+
+.process-bullets {
+    margin-left: 3rem;
+    line-height: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .process-img {
