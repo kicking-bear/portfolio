@@ -315,11 +315,11 @@ input {
 .rw-image {
     width: 45%;
     height: 100%;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 .rw-image img {
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 .rw-info-block {
