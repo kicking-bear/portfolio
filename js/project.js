@@ -66,7 +66,8 @@ const mainData =
             "conclusion": 
                 `The design was a lot of fun to do. The developers had little to no issue or questions with the design either. The only real challenge was adjusting the pricing section to be responsive, but I believe I found an elegant solution for this too.<br>
                 <br>
-                I believe the final result is a cleaner, more inviting, and interesting websit refresh.`
+                I believe the final result is a cleaner, more inviting, and interesting websit refresh.`,
+            "projectLink": `https://www.figma.com/file/B6r2sCxnZG2DH82Mvf6YTK/Salamone-2022-Redesign?node-id=80%3A2`
         },
 
         /** Logo Module **/
@@ -120,7 +121,8 @@ const mainData =
                 In a meeting with the developers we discussed our findings and the difficulties with implementing some of our proposals.<br>
                 <br>
                 We came to a compromise based on these findings to simplify the options and make them more visible within the first click.`
-                
+                ,
+            "projectLink": `https://www.figma.com/proto/YdGJEojNrxnXVvYz5w4Bcw/Logo-Module-Prototype?page-id=0%3A1&node-id=46%3A1674&viewport=117%2C402%2C0.06&scaling=min-zoom&starting-point-node-id=46%3A1674`
         },
         
         /** Market Your Firm **/
@@ -167,7 +169,8 @@ const mainData =
             "conclusion": 
                 `The design was approved all the way to until it was going to be built. The project ultimately fell to the bottom of a larger priority list with plans to come back to it.<br>
                 <br>
-                This was one of my first projects at Martindale-Hubbell and regardless of anything, I was proud of what I created and more importantly, grateful I got to experience the process.`
+                This was one of my first projects at Martindale-Hubbell and regardless of anything, I was proud of what I created and more importantly, grateful I got to experience the process.`,
+            "projectLink": `https://www.figma.com/proto/QqtEiH6pFBaVaBaq9npUWR/Market-Your-Firm-Redesign?page-id=260%3A66&node-id=260%3A67&viewport=1403%2C1953%2C0.5&scaling=min-zoom&starting-point-node-id=260%3A67&show-proto-sidebar=1`
         },
         
         /** Captorra Banner Animation **/
@@ -216,7 +219,8 @@ const mainData =
             },
             
             "conclusion": 
-                `Since this project I've had a lot more time to experiment with animation in After Effects. I've also moved onto projects at Internet Brands to incorporate basic animations to the website builder itself WebManager.`
+                `Since this project I've had a lot more time to experiment with animation in After Effects. I've also moved onto projects at Internet Brands to incorporate basic animations to the website builder itself WebManager.`,
+            "projectLink": `https://www.captorra.com/`
         },
     ]
 }; 
@@ -237,6 +241,7 @@ function initializeMain() {
     generateChallengeGridSection(mainTag);
     generateProcessSection(mainTag);
     generateConclusionSection(mainTag);
+    generateProjectLink(mainTag);
 }
 
 function fetchTitle(){
@@ -424,13 +429,28 @@ function generateConclusionSection(mainTag) {
     conclusionText.innerHTML = projectObj['conclusion'];
 
 
+    let projectLinkButton = generateProjectLink();
+
 
     conclusionBlock.appendChild(sectionTitle);
     conclusionBlock.appendChild(conclusionText);
+    conclusionBlock.appendChild(projectLinkButton);
 
     
     conclusionSection.appendChild(conclusionBlock);
     mainTag.appendChild(conclusionSection);
+}
+
+function generateProjectLink() {
+    let projectLinkBlock = doc.createElement('div');
+    projectLinkBlock.classList.add('center-text');
+    projectLinkBlock.innerHTML = `<button class="project-link-button" type="button"><h2>See the full project</h2></button>`;
+
+    let projectLink = "window.open('" + projectObj['projectLink'] + "', '_blank').focus()";
+    projectLinkBlock.getElementsByTagName('button')[0].setAttribute('onclick', projectLink);
+    console.log(projectLinkBlock);
+
+    return projectLinkBlock;
 }
 
 
