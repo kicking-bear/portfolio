@@ -413,14 +413,14 @@ function generateConclusionSection(mainTag) {
     conclusionSection.classList.add('light-section');
 
     let conclusionBlock = doc.createElement('div');
-    conclusionBlock.classList.add('content-block', 'center-text', 'conclusion-block');
+    conclusionBlock.classList.add('content-block');
 
     let sectionTitle = doc.createElement('div');
     sectionTitle.classList.add('section-title');
     sectionTitle.innerHTML = "<h3>Conclusion</h3>";
 
     let conclusionText = doc.createElement('div');
-    conclusionText.classList.add('content-block', 'conclusion-text');
+    conclusionText.classList.add('conclusion-text');
     conclusionText.innerHTML = projectObj['conclusion'];
 
 

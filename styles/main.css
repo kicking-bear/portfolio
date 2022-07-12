@@ -505,9 +505,6 @@ input {
     padding: min(10vw, 100px);
 }
 
-.conclusion-block {
-    padding: min(2vw, 30px) var(--padding-clamp) var(--padding-clamp);
-}
 
 .conclusion-text {
     font-weight: 500;
